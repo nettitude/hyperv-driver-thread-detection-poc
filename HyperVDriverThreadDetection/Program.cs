@@ -38,7 +38,7 @@ namespace HyperVDriverThreadDetection
                     }
 
                     // some other error occurred.
-                    Console.WriteLine("[X] GetLogicalProcessorInformationEx call failed with error {0}", lastError);
+                    Console.WriteLine("[X] GetLogicalProcessorInformationEx call failed with error 0x{0:x}", lastError);
                     return -1;
                 }
 
@@ -103,7 +103,7 @@ namespace HyperVDriverThreadDetection
                 else if (status != NativeConsts.STATUS_SUCCESS)
                 {
                     // some other error occurred.
-                    Console.WriteLine("[X] NtQuerySystemInformation call failed with status {0}", status);
+                    Console.WriteLine("[X] NtQuerySystemInformation call failed with status 0x{0:x}", status);
                     return null;
                 }
 
@@ -180,7 +180,7 @@ namespace HyperVDriverThreadDetection
                 else if (status != NativeConsts.STATUS_SUCCESS)
                 {
                     // some other error occurred.
-                    Console.WriteLine("[X] NtQuerySystemInformation call failed with status {0}", status);
+                    Console.WriteLine("[X] NtQuerySystemInformation call failed with status 0x{0:x}", status);
                     return null;
                 }
 
